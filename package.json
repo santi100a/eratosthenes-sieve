@@ -1,11 +1,11 @@
 {
-  "name": "@author/package",
-  "version": "0.0.1",
-  "main": "cjs/index.js",
-  "module": "index.js",
-  "typings": "cjs/index.d.ts",
-  "license": "MIT",
-  "devDependencies": {
+	"name": "@santi100/eratosthenes-sieve",
+	"version": "0.0.1",
+	"main": "cjs/index.js",
+	"module": "index.js",
+	"typings": "cjs/index.d.ts",
+	"license": "MIT",
+	"devDependencies": {
 		"@types/jest": "^29.4.1",
 		"@typescript-eslint/eslint-plugin": "^6.4.0",
 		"@typescript-eslint/parser": "^6.4.0",
@@ -18,25 +18,36 @@
 		"remark-validate-links": "^12.1.1",
 		"typescript": "4.9.5"
 	},
-  "author": "",
-  "description": "",
-  "keywords": [],
-  "repository": {
-    "url": "https://github.com/<author>/<repo>",
-    "type": "git"
-  },
-  "scripts": {
-    "build": "tsc",
-    "test": "jest",
-    "dev": "tsc -w",
-    "prettify": "prettier --write src/**/*.ts",
-    "lint": "eslint src/**/*.ts",
-    "esm-wrapper": "node scripts/esm-wrapper.js",
-    "validate-package-json": "node scripts/validate-package-json.js",
-    "lint-fix": "eslint --fix src/**/*.ts",
-    "test:watch": "jest --watchAll",
-    "check-links": "remark --frail .",
-    "postbuild": "yarn esm-wrapper",
-    "prepublishOnly": "yarn validate-package-json"
-  }
+	"author": "santi100a <santyrojasprieto9+npm@gmail.com>",
+	"description": "Santi's Energetic Sieve of Eratosthenes: How can you sift numbers?",
+	"keywords": [
+		"sieve-of-eratosthenes",
+		"math",
+		"prime-numbers",
+		"es3",
+		"santi100",
+		"lightweight",
+		"portable"
+	],
+	"repository": {
+		"url": "https://github.com/santi100a/eratosthenes-sieve",
+		"type": "git"
+	},
+	"scripts": {
+		"build": "tsc",
+		"test": "jest",
+		"dev": "tsc -w",
+		"prettify": "prettier --write src/**/*.ts",
+		"lint": "eslint src/**/*.ts",
+		"esm-wrapper": "node scripts/esm-wrapper.js",
+		"validate-package-json": "node scripts/validate-package-json.js",
+		"lint-fix": "eslint --fix src/**/*.ts",
+		"test:watch": "jest --watchAll",
+		"check-links": "remark --frail .",
+		"postbuild": "yarn esm-wrapper",
+		"prepublishOnly": "yarn validate-package-json"
+	},
+	"dependencies": {
+		"@santi100/assertion-lib": "^2.0.2"
+	}
 }

@@ -1,112 +1,62 @@
-# Template for my NPM libraries
+# Santi's Energetic Sieve of Eratosthenes
 
-Hello, everyone! This is a template repo for my libraries.
-You'll find a readme template inside this file.
-
-In order for the CI workflow's publishing jobs to execute successfully, you must have two
-Actions secrets set up -- `NPM_AUTH_TOKEN` and `GPR_AUTH_TOKEN`.
-
-You might want to check the [YAML Actions workflow](.github/workflows/ci.yml) for hints
-and information you may want or need to know.
-
-## Template features
-
-- License (both template contents and code built from it): MIT.
-- Code of conduct: adapted from the Contributor Covenant.
-- Package manager: Yarn 1.22.19.
-- Automatic testing: Jest.
-- TypeScript 4.9.5 for built-in type definitions and support for compiling to ES3.
-- ESLint and Prettier.
-- Security policy and contribution guidelines.
-
-- Self-made scripts for verification of package.json and creation of an ESM wrapper
-  around TypeScript's CommonJS output to allow for usage within both CJS and ESM projects.
-
-## Your todos as a user of this template
-
-- [ ] Change all placeholders all over different files.
-- [ ] Fill this README template.
-
-<!-- START README TEMPLATE -->
-<!-- 
-* Make sure to replace ALL placeholders.
-! The readme will be broken otherwise!
--->
-
-<!-- # Library Name -->
-<!-- Badges -->
-<!-- Example: 
 [![Build Status][workflow badge]][repo actions]
 [![npm homepage][npm badge]][npm home]
 [![GitHub stars][stars badge]][repo url]
 [![License][license badge]][repo url]
 [![Bundlephobia stats][bundlephobia badge]][bundlephobia url]
 
-[workflow badge]: https://github.com/<author>/<repo>/actions/workflows/ci.yml/badge.svg
-[npm badge]: https://img.shields.io/npm/v/@<author>/<repo>
-[stars badge]: https://img.shields.io/github/stars/<author>/<repo>.svg
-[license badge]: https://img.shields.io/github/license/<author>/<repo>.svg
-[bundlephobia badge]: https://img.shields.io/bundlephobia/min/@<author>/<repo>
+[workflow badge]: https://github.com/santi100a/eratosthenes-sieve/actions/workflows/ci.yml/badge.svg
+[npm badge]: https://img.shields.io/npm/v/@santi100/eratosthenes-sieve
+[stars badge]: https://img.shields.io/github/stars/santi100a/eratosthenes-sieve.svg
+[license badge]: https://img.shields.io/github/license/santi100a/eratosthenes-sieve.svg
+[bundlephobia badge]: https://img.shields.io/bundlephobia/min/@santi100/eratosthenes-sieve
+[npm home]: https://npmjs.org/package/@santi100/eratosthenes-sieve
+[repo actions]: https://github.com/santi100a/eratosthenes-sieve/actions
+[repo url]: https://github.com/santi100a/eratosthenes-sieve
+[bundlephobia url]: https://bundlephobia.com/package/@santi100/eratosthenes-sieve@latest
 
-[npm home]: https://npmjs.org/package/@<author>/<repo>
-[repo actions]: https://github.com/<author>/<repo>/actions
-[repo url]: https://github.com/<author>/<repo>
-[bundlephobia url]: https://bundlephobia.com/package/@<author>/<repo>@latest
--->
-
-<!-- Bullet points -->
-<!-- Example:
-- 🚀 Lightweight and fast[^](#disclaimers)
-- 👴 ES3-compliant[*](#disclaimers)
+- 🚀 Lightweight and fast
+- 👴 ES3-compliant
 - 💻 Portable between the browser and Node.js
--->
+- 📘 Includes TypeScript definitions
 
-<!-- ## What's this? -->
-<!-- Description -->
+## What's this?
 
-<!-- Mentions, inspirations -->
+This is a simple, lightweight implementation of the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
 
-<!-- ## Installation -->
-<!-- Installation steps and/or commands -->
-<!-- Example:
-- Via NPM: `npm install @<author>/<repo>`
-- Via Yarn: `yarn add @<author>/<repo>`
-- Via PNPM: `pnpm install @<author>/<repo>`
--->
+## Installation
 
-<!-- ## API -->
-<!--
-* If a class/function/variable is deprecated, you must cross it out by wrapping the 
-* `<class/function/variable prototype/definition/type def>;` with tildes, like this:
-* ~~`<class/function/variable prototype/definition/type def>;`~~ (deprecated [since <version>])
+- Via NPM: `npm install @santi100/eratosthenes-sieve`
+- Via Yarn: `yarn add @santi100/eratosthenes-sieve`
+- Via PNPM: `pnpm install @santi100/eratosthenes-sieve`
 
-- `<class/function/variable prototype/definition/type def>;` ([since <version if not first version>]) ([deprecated [since <version>]]) <description>
-   | Name       |     Type    | Description        | Optional? | Default                                |
-   |------------|-------------|--------------------|-----------|----------------------------------------|
-   |<param name>|<param type> |<param description> | <Yes/No>  | <N/A if not optional, else the default>|
-- ...
--->
+## API
 
-<!-- ## Usage -->
-<!-- Usage examples (code snippets) -->
-<!-- 
-Usage examples go here
-* This is a very important step.
+- `function sieve(n: number): number[];` Finds all prime numbers from 2 up to a given number `n`.
+
+  | Name | Type | Description | Optional? | Default |
+  | ---- | ---- | ----------- | --------- | ------- |
+  | `n` | `number` | The upper limit of the range of numbers to check for primes. | No | _N/A_ |
+
+## Usage
+
 ```typescript
+// Import the sieve function
+const sieve = require('@santi100/eratosthenes-sieve'); // CJS
+import sieve = require('@santi100/eratosthenes-sieve'); // TypeScript
+import sieve from '@santi100/eratosthenes-sieve'; // ESM
+
+
+// Use the sieve function to find prime numbers up to 100
+const primesUpTo100 = sieve(100);
+
+// Print the prime numbers
+console.log('Prime numbers up to 100:', primesUpTo100); // outputs [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+
 ```
--->
-<!-- ## Contribute -->
 
-<!-- Contribution hints and basic instructions -->
-<!-- Example:
-Wanna contribute? [File an issue](issues) or [pull request](pulls)! 
+## Contribute
+
+Wanna contribute? [File an issue](https://github.com/santi100a/eratosthenes-sieve/issues) or [pull request](https://github.com/santi100a/eratosthenes-sieve/pulls)!
 Look at [the contribution instructions](CONTRIBUTING.md) and make sure you follow the [contribution Code of Conduct](CODE_OF_CONDUCT.md).
--->
-
-<!-- ## Disclaimers -->
-<!-- Any disclaimers you may need. -->
-<!--
-**Hasn't been tested in an actual ES3 environment. Feel free to open an issue or pull request if you find any non-ES3 thing. See "Contribute" for instructions on how to do so.*
-
-*^The source code is just a few kilobytes in size.*
--->
