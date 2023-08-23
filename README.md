@@ -35,9 +35,9 @@ This is a simple, lightweight implementation of the [Sieve of Eratosthenes](http
 
 - `function sieve(n: number): number[];` Finds all prime numbers from 2 up to a given number `n`.
 
-  | Name | Type | Description | Optional? | Default |
-  | ---- | ---- | ----------- | --------- | ------- |
-  | `n` | `number` | The upper limit of the range of numbers to check for primes. | No | _N/A_ |
+  | Name | Type     | Description                                                  | Optional? | Default |
+  | ---- | -------- | ------------------------------------------------------------ | --------- | ------- |
+  | `n`  | `number` | The upper limit of the range of numbers to check for primes. | No        | _N/A_   |
 
 ## Usage
 
@@ -47,13 +47,11 @@ const sieve = require('@santi100/eratosthenes-sieve'); // CJS
 import sieve = require('@santi100/eratosthenes-sieve'); // TypeScript
 import sieve from '@santi100/eratosthenes-sieve'; // ESM
 
-
 // Use the sieve function to find prime numbers up to 100
 const primesUpTo100 = sieve(100);
 
 // Print the prime numbers
 console.log('Prime numbers up to 100:', primesUpTo100); // outputs [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-
 ```
 
 ## Contribute

@@ -1,7 +1,7 @@
 {
-    "bracketSameLine": true,
-    "semi": true,
-    "singleQuote": true,
-    "useTabs": true,
-    "trailingComma": "none"
+	"bracketSameLine": true,
+	"semi": true,
+	"singleQuote": true,
+	"useTabs": true,
+	"trailingComma": "none"
 }

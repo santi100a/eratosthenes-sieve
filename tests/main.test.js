@@ -11,7 +11,9 @@ describe('sieve', () => {
 	describe('error handling', () => {
 		test('it correctly handles incorrect argument types', () => {
 			expect(sieve).toThrow(/"n" must be of type "number"/);
-			expect(() => sieve('not a number')).toThrow(/"n" must be of type "number"/);
+			expect(() => sieve('not a number')).toThrow(
+				/"n" must be of type "number"/
+			);
 		});
 		test('it correctly handles incorrect amounts', () => {
 			expect(() => sieve(-1)).toThrow(/"n" must be positive/);
