@@ -23,7 +23,22 @@
 
 ## What's this?
 
-This is a simple, lightweight implementation of the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
+This is a simple, lightweight implementation of the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) algorithm in TypeScript.
+The Sieve of Eratosthenes is generally considered more efficient than the Trial Division method for finding prime numbers, especially when dealing with larger ranges or multiple prime number searches. Here are several reasons why the Sieve is better than Trial Division:
+
+1. **Time Complexity**: The Sieve of Eratosthenes has a time complexity of
+   $$ O(n \log(\log(n))) $$
+   where n is the upper limit of the range being considered.
+   On the other hand, Trial Division has a time complexity of $$ O(n \sqrt{n}) $$
+   The Sieve's complexity grows more slowly and is much better suited for larger ranges.
+
+2. **Multiple Primes**: The Sieve can find all prime numbers in a given range simultaneously, whereas Trial Division needs to be applied individually to each number being tested. This means that the Sieve is particularly efficient when you need a list of primes within a certain range.
+
+3. **Fewer Divisions**: In the Sieve, each composite number is marked only once by its prime factor, whereas in Trial Division, each number is tested for divisibility by all smaller primes. This means the Sieve has fewer divisions, which reduces the overall computational work.
+
+4. **Memory Efficiency**: While the Sieve requires some memory to store the boolean array (or bitset) to mark composites, the memory usage is generally more efficient compared to the Trial Division method, especially when dealing with large ranges.
+
+5. **Algorithmic Simplicity**: The Sieve of Eratosthenes is conceptually simpler to understand and implement than Trial Division. It's a straightforward algorithm that involves marking multiples of primes as composites, making it easier to code and debug.
 
 ## Installation
 
@@ -58,3 +73,4 @@ console.log('Prime numbers up to 100:', primesUpTo100); // outputs [2, 3, 5, 7, 
 
 Wanna contribute? [File an issue](https://github.com/santi100a/eratosthenes-sieve/issues) or [pull request](https://github.com/santi100a/eratosthenes-sieve/pulls)!
 Look at [the contribution instructions](CONTRIBUTING.md) and make sure you follow the [contribution Code of Conduct](CODE_OF_CONDUCT.md).
+You can also [sponsor me](https://github.com/sponsors/santi100a)! 💕💕
